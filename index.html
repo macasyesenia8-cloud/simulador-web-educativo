@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Educativo - El Funcionamiento de la Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen font-sans text-slate-800 antialiased">
+
+    <!-- BARRA DE NAVEGACIÓN RESPONSIVA -->
+    <header class="bg-indigo-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 flex-wrap md:flex-nowrap">
+                <div class="flex-shrink-0">
+                    <span class="text-xl font-bold tracking-tight">Simulador Web</span>
+                </div>
+                <nav aria-label="Navegación principal" class="w-full md:w-auto mt-2 md:mt-0">
+                    <ul class="flex flex-wrap gap-2 text-sm font-medium">
+                        <li><a href="index.html" class="bg-indigo-700 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400" aria-current="page">Inicio</a></li>
+                        <li><a href="http.html" class="text-indigo-200 hover:bg-indigo-800 hover:text-white px-3 py-2 rounded-md transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-400">Solicitud HTTP</a></li>
+                        <li><a href="servidor.html" class="text-indigo-200 hover:bg-indigo-800 hover:text-white px-3 py-2 rounded-md transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-400">Servidor Web</a></li>
+                        <li><a href="renderizado.html" class="text-indigo-200 hover:bg-indigo-800 hover:text-white px-3 py-2 rounded-md transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-400">Renderizado HTML5</a></li>
+                        <li><a href="ejemplo.html" class="text-indigo-200 hover:bg-indigo-800 hover:text-white px-3 py-2 rounded-md transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-400">Ejemplo Práctico</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- COMPONENTE ADICIONAL: ALERTA DE INTRODUCCIÓN -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 w-full" role="alert">
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-md shadow-sm">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <span class="text-amber-800 font-bold" aria-hidden="true">i</span>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-amber-900 font-medium">
+                        ¿Sabías qué? Cuando accedes a un sitio web desde el navegador suceden muchas cosas en milisegundos de las que no te das cuenta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL EN FORMATO GRID -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- CONTENIDO CENTRALIZADO -->
+            <section class="lg:col-span-2 space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <h1 class="text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Inicio: ¿Qué ocurre al ingresar una URL?</h1>
+                    <p class="text-lg leading-relaxed text-slate-600 mb-6">
+                        Al ingresar una URL en tu navegador y presionar "Enter", se desencadenan una serie de pasos automáticos que tardan apenas milisegundos. El proceso principal abarca desde la traducción de la dirección hasta la visualización de la página.
+                    </p>
+                    <div class="bg-slate-100 rounded-lg p-4 flex justify-center">
+                        <img src="img/LogoURL.png" alt="Logotipo conceptual de una URL en el navegador web" class="max-w-full h-auto rounded-md shadow-sm">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ASIDE REORGANIZADO EN CARD -->
+            <aside class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 border-b pb-2">Infografía: Partes de una URL</h2>
+                    <p class="text-sm text-slate-500 mb-4">Analiza visualmente la anatomía de un enlace estándar de internet.</p>
+                    <div class="bg-slate-100 rounded-lg p-4 flex justify-center">
+                        <img src="img/partes-url.png" alt="Diagrama explicativo mostrando el protocolo, subdominio, dominio y extensión de una URL" class="max-w-full h-auto rounded-md">
+                    </div>
+                </div>
+                
+                <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-100">
+                    <h3 class="text-lg font-bold text-indigo-900 mb-2">Funcionamiento General</h3>
+                    <img src="img/funcionamientopaginaweb.png" alt="Esquema global de la comunicación Cliente y Servidor" class="w-full h-auto rounded-lg mb-2 shadow-inner">
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-slate-900 text-slate-400 py-6 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm">&copy; 2026 Simulador Educativo Web.</p>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300">
+                Elaborado por: Yesenia Macas
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud HTTP - Simulador Educativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen font-sans text-slate-800 antialiased">
+
+    <!-- NAVBAR -->
+    <header class="bg-indigo-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 flex-wrap md:flex-nowrap">
+                <div class="flex-shrink-0"><span class="text-xl font-bold tracking-tight">Simulador Web</span></div>
+                <nav aria-label="Navegación principal" class="w-full md:w-auto mt-2 md:mt-0">
+                    <ul class="flex flex-wrap gap-2 text-sm font-medium">
+                        <li><a href="index.html" class="text-indigo-200 hover:bg-indigo-800 hover:text-white px-3 py-2 rounded-md transition focus:outline-none focus:ring-2 focus:ring-amber-400">Inicio</a></li>
+                        <li><a href="http.html" class="bg-indigo-700 text-white px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-400" aria-current="page">Solicitud HTTP</a></li>
+                        <li><a href="servidor.html" class="text-indigo-200 hover:bg-indigo-800 hover:text-white px-3 py-2 rounded-md transition focus:outline-none focus:ring-2 focus:ring-amber-400">Servidor Web</a></li>
+                        <li><a href="renderizado.html" class="text-indigo-200 hover:bg-indigo-800 hover:text-white px-3 py-2 rounded-md transition focus:outline-none focus:ring-2 focus:ring-amber-400">Renderizado HTML5</a></li>
+                        <li><a href="ejemplo.html" class="text-indigo-200 hover:bg-indigo-800 hover:text-white px-3 py-2 rounded-md transition focus:outline-none focus:ring-2 focus:ring-amber-400">Ejemplo Práctico</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div class="bg-white p-6 md:p-8 rounded-xl shadow-md border border-slate-100 space-y-6">
+            <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Solicitud HTTP</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center bg-indigo-50/50 p-4 rounded-xl border border-indigo-100">
+                <div>
+                    <p class="text-slate-700 leading-relaxed">
+                        Cuando el navegador ya conoce la dirección IP del servidor, envía un mensaje estructurado llamado <strong>"Solicitud HTTP"</strong>. Los métodos más comunes que utiliza son <span class="bg-slate-200 px-2 py-0.5 rounded font-mono text-xs">GET</span> y <span class="bg-slate-200 px-2 py-0.5 rounded font-mono text-xs">POST</span>.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="img/solicituhttp.png" alt="Ilustración representativa de un envío de paquete o petición HTTP" class="max-w-full h-auto rounded-lg shadow-sm">
+                </div>
+            </div>
+
+            <h2 class="text-xl font-bold text-slate-900 pt-2">Métodos Principales</h2>
+            
+            <!-- TABLA ACCESIBLE Y RESPONSIVA -->
+            <div class="overflow-x-auto border border-slate-200 rounded-lg">
+                <table class="min-w-full divide-y divide-slate-200 text-left text-sm">
+                    <thead class="bg-slate-50 text-slate-700 uppercase tracking-wider font-semibold text-xs">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">Método</th>
+                            <th scope="col" class="px-6 py-3">Descripción</th>
+                            <th scope="col" class="px-6 py-3">Cuándo se usa</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-slate-600 bg-white">
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="px-6 py-4 font-mono font-bold text-indigo-600">GET</td>
+                            <td class="px-6 py-4">Solicita la representación de un recurso específico.</td>
+                            <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Para leer o consultar</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="px-6 py-4 font-mono font-bold text-amber-600">POST</td>
+                            <td class="px-6 py-4">Envía datos al servidor de forma segura para procesarlos.</td>
+                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Para formularios y registros</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100">
+                <p class="text-sm text-slate-500 mb-3">Para profundizar más, puedes consultar la documentación oficial externa:</p>
+                <a href="https://www.ionos.com/es-us/digitalguide/paginas-web/desarrollo-web/get-vs-post/" target="_blank" class="inline-flex items-center px-4 py-2 bg-slate-800 text-white font-medium text-sm rounded-lg hover:bg-slate-700 focus:ring-4 focus:ring-slate-300 transition duration-150 ease-in-out">
+                    Documentación oficial en IONOS &rarr;
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-6 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm">&copy; 2026 Simulador Educativo Web.</p>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300">Elaborado por: Yesenia Macas</span>
+        </div>
+    </footer>
+</body>
+</html>
